@@ -42,6 +42,17 @@ public class FlamesGame {
             i= (i+ remainingchar-1)%flames.size();
             flames.remove(i);
         }
-        System.out.println(flames.getFirst());
+        char resultchar= flames.getFirst();
+        String result;
+        switch (resultchar) {
+            case 'F' -> result = "Friends";
+            case 'L' -> result = "Love";
+            case 'A' -> result = "Affection";
+            case 'M' -> result = "Marriage";
+            case 'E' -> result = "Enemies";
+            case 'S' -> result = "Siblings";
+            default -> result = "Unknown";
+        }
+        System.out.println("Relationship: "+result);
     }
 }
